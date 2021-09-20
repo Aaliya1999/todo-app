@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: white;
+  background-image: url("./images/bg-desktop-light.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 34.375rem;
+  margin: 5rem auto 0;
+  margin: 5rem auto 0;
+}
+
+p {
+  font-weight: 300;
+}
+
+h1 {
+  color: white;
+  letter-spacing: 0.625rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 15px 40px;
+  border-bottom: 1px solid #afafaf;
+  font-size: 20px;
+  
+}
+
+a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+}
+
+input {
+  margin-top: 30px;
+  padding: 20px 20px;
+  width: 30.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.container {
+  width: 34.375rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.3125rem;
+  margin-top: 1.875rem;
+  text-align: left;
+  box-shadow: 2px 5px 120px rgb(116, 114, 150);
+}
+
+.input-helper {
+  width: 34.375rem;
+  margin: auto;
+}
+
+.cancel-text {
+  text-decoration: line-through;
+  opacity: 0.5;
+} 
+
+.btn {
+  margin-top: 28px;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.footer {
+  justify-content: space-between;
+  padding: 10px 15px; 
+}
+
+

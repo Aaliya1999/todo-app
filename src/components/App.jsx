@@ -66,7 +66,7 @@ function App() {
     <>
       <div className="header helper">
         <h1>TODO</h1>
-        <img src="./images/icon-sun.svg" alt="sun" />
+        <img src="../images/icon-sun.svg" alt="sun" />
       </div>
       <TakeInput add={add} />
       <div className="container">

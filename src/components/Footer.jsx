@@ -38,27 +38,24 @@ const Footer = ({ count, setStatus, setItemList, itemList }) => {
   return (
     <div className="helper footer">
       <p>{count} items left</p>
-      <div>
+      <div className="helper">
         <button
           onClick={clicked}
-          className={ all ? "footerdiv selected" : "footerdiv"}
-        
+          className={all ? "footerdiv selected" : "footerdiv"}
           value="All"
         >
           All
         </button>
         <button
           onClick={clicked}
-      
-          className={ active ? "footerdiv selected" : "footerdiv"}
+          className={active ? "footerdiv selected" : "footerdiv"}
           value="Active"
         >
           Active
         </button>
         <button
           onClick={clicked}
-    
-          className={ completed ? "footerdiv selected" : "footerdiv"}
+          className={completed ? "footerdiv selected" : "footerdiv"}
           value="Completed"
         >
           Completed
@@ -67,7 +64,6 @@ const Footer = ({ count, setStatus, setItemList, itemList }) => {
       <button
         onClick={clearCompleted}
         className="footerdiv"
-        value="Clear Completed"
       >
         Clear Completed
       </button>

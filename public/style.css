@@ -5,14 +5,15 @@
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: white;
   background-image: url("./images/bg-desktop-light.jpg");
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100vw;
   text-align: center;
 }
 
@@ -29,6 +30,7 @@ body {
 }
 
 p {
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -45,13 +47,27 @@ li {
   padding: 15px 40px;
   border-bottom: 1px solid #afafaf;
   font-size: 20px;
-  
+  cursor: pointer;
 }
 
-a {
-  text-decoration: none;
+.footerdiv {
+  display: inline-block;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
   padding: 5px;
-  color: black;
+  color: rgb(58, 58, 58);
+}
+
+.selected {
+  font-size: 20px;
+  font-weight: 400;
+  color: blue;
+}
+.footerdiv:hover {
+  color: blue;
+  font-weight: 600;
 }
 
 input {
@@ -62,6 +78,7 @@ input {
   background-color: white;
   border-radius: 5px;
   font-size: 20px;
+  outline: none;
 }
 
 .container {
@@ -82,7 +99,7 @@ input {
 .cancel-text {
   text-decoration: line-through;
   opacity: 0.5;
-} 
+}
 
 .btn {
   margin-top: 28px;
@@ -98,7 +115,37 @@ input {
 
 .footer {
   justify-content: space-between;
-  padding: 10px 15px; 
+  padding: 10px 15px;
 }
 
+@media only screen and (max-width: 570px) {
+  body {
+    background-image: url("./images/bg-mobile-light.jpg");
+    background-size: cover auto;
+  }
+  .header {
+    width: 25rem;
+  }
 
+  input {
+    width: 20rem;
+  }
+
+  .input-helper {
+    width: 25rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 5px 8px;
+  }
+  .container {
+    width: 25rem;
+  }
+  .selected {
+    font-size: 15px;
+  }
+}

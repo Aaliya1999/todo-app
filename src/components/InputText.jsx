@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const TakeInput = ({addItem,setText,inputText}) => {
-    
+const TakeInput = ({ add }) => {
+  const [text, setText] = useState({
+    item: "",
+    isCompleted: "",
+  });
 
-    function changeInput(event) {
-        setText(event.target.value);
-    }
+  function handleText(event) {
+    const txt = event.target.value;
+    setText({
+      item: txt,
+      isCompleted: false
+    });
+  }
 
-    return (
-        <div className="input-helper helper">
-        <form>
-          <input
-            onChange={changeInput}
-            type="text"
-            name="taskItem"
-            placeholder="Create a new todo..."
-            value={inputText}
-          />
-        </form>
-        <button onClick={(event)=>addItem(event,inputText)} className="btn">+</button>
-      </div>
-    );
-}
+  function addText() {
+    add(text);
+    setText({
+      item: "",
+      isCompleted: ""
+    });
+  }
+
+  return (
+    <div className="input-helper helper">
+      <form>
+        <input
+          onChange={handleText}
+          type="text"
+          name="taskItem"
+          placeholder="Create a new todo..."
+          value={text.item}
+        />
+      </form>
+      <button onClick={addText} className="btn">
+        +
+      </button>
+    </div>
+  );
+};
 
 export default TakeInput;

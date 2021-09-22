@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 
-const Footer = ({ status, count, setStatus, setItemList, itemList }) => {
+const Footer = ({ count, setStatus, setItemList, itemList }) => {
   const [all, setall] = useState(true);
   const [active, setActive] = useState(false);
   const [completed, setCompleted] = useState(false);
@@ -42,14 +42,14 @@ const Footer = ({ status, count, setStatus, setItemList, itemList }) => {
         <button
           onClick={clicked}
           className={ all ? "footerdiv selected" : "footerdiv"}
-          // style={all && styleBtn()}
+        
           value="All"
         >
           All
         </button>
         <button
           onClick={clicked}
-          // style={active && styleBtn()}
+      
           className={ active ? "footerdiv selected" : "footerdiv"}
           value="Active"
         >
@@ -57,7 +57,7 @@ const Footer = ({ status, count, setStatus, setItemList, itemList }) => {
         </button>
         <button
           onClick={clicked}
-          // style={completed && styleBtn()}
+    
           className={ completed ? "footerdiv selected" : "footerdiv"}
           value="Completed"
         >

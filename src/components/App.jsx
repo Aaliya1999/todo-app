@@ -12,14 +12,32 @@ function App() {
   const [filterTodos, setFilterTodos] = useState([]);
 
   useEffect(() => {
+    getTodos();
+  }, []);
+
+  useEffect(() => {
     changeStatus();
     countItem();
+    saveTodos();
   }, [itemList, status]);
 
   function add(item) {
     setItemList((prevItems) => {
       return [...prevItems, item];
     });
+  }
+
+  function saveTodos() {
+    localStorage.setItem("itemList", JSON.stringify(itemList));
+  }
+
+  function getTodos() {
+    if (localStorage.getItem("itemList") === null) {
+      localStorage.setItem("itemList", JSON.stringify([]));
+    } else {
+      let get = localStorage.getItem("itemList", JSON.stringify(itemList));
+      setItemList(JSON.parse(get));
+    }
   }
 
   function changeStatus() {
@@ -48,7 +66,7 @@ function App() {
     <>
       <div className="header helper">
         <h1>TODO</h1>
-        <img src="/images/icon-moon.svg" alt="moon" />
+        <img src="/images/icon-sun.svg" alt="moon" />
       </div>
       <TakeInput add={add} />
       <div className="container">

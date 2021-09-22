@@ -79,6 +79,7 @@ input {
   border-radius: 5px;
   font-size: 20px;
   outline: none;
+  box-shadow: -3px 5px 12px -6px rgba(0,0,0,0.75);
 }
 
 .container {
@@ -88,7 +89,7 @@ input {
   border-radius: 0.3125rem;
   margin-top: 1.875rem;
   text-align: left;
-  box-shadow: 2px 5px 120px rgb(116, 114, 150);
+  box-shadow: -3px 5px 12px -6px rgba(0,0,0,0.75);
 }
 
 .input-helper {
@@ -111,6 +112,7 @@ input {
   border-radius: 5px;
   font-size: 40px;
   cursor: pointer;
+  box-shadow: -3px 5px 12px -6px rgba(0,0,0,0.75);
 }
 
 .footer {

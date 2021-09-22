@@ -14,12 +14,19 @@ const TakeInput = ({ add }) => {
     });
   }
 
-  function addText() {
+  function addText(event) {
     add(text);
     setText({
       item: "",
       isCompleted: ""
     });
+    event.preventDefault();
+  }
+
+  function keyHandler(e) {
+    if (e.key === "Enter") {
+      addText(e)
+    }
   }
 
   return (
@@ -27,13 +34,14 @@ const TakeInput = ({ add }) => {
       <form>
         <input
           onChange={handleText}
+          onKeyPress={keyHandler}
           type="text"
           name="taskItem"
           placeholder="Create a new todo..."
           value={text.item}
         />
       </form>
-      <button onClick={addText} className="btn">
+      <button onClick={(event)=>addText(event)} className="btn">
         +
       </button>
     </div>
